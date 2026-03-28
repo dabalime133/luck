@@ -225,11 +225,12 @@
       transition: transform var(--t-fast);
     }
     nav a:hover { color: var(--cyan); }
-    nav a:hover::after { transform: scaleX(1); }
-
+  nav a:hover::after { transform: scaleX(1); }
+        
     .nav-links { display: flex; gap: 32px; }
     @media (max-width: 768px) { .nav-links { display: none; } }
-
+.logo-l { color: var(--cyan); }
+    .logo-j { color: var(--gold); }
     .btn-nav {
       font-family: var(--font-display);
       font-size: 11px;
@@ -933,7 +934,7 @@
       background: linear-gradient(90deg, transparent, var(--cyan), var(--gold), transparent);
       opacity: 0.3;
     }
-
+<span><span class="logo-l">LUCKY</span> <span class="logo-j">JET</span></span>
     .footer-inner {
       max-width: 1200px; margin: 0 auto;
       display: grid;
