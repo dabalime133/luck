@@ -1268,7 +1268,7 @@
   </style>
 </head>
 <body>
-
+<div class="container">
 <!-- Background Elements -->
 <div class="bg-grid" aria-hidden="true"></div>
 <canvas class="stars-canvas" id="stars" aria-hidden="true"></canvas>
@@ -2098,6 +2098,7 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </div>
 </script>
 </body>
 </html>
