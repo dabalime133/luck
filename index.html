@@ -136,7 +136,13 @@
       overflow-x: hidden;
       cursor: default;
     }
-
+.container {
+    max-width: 1200px; /* Ограничиваем ширину сайта */
+    margin: 0 auto;    /* Центрируем блок: 0 сверху/снизу, auto по бокам */
+    padding: 0 15px;   /* Чтобы контент не лип к краям на мобилках */
+    width: 100%;       /* Чтобы блок занимал всю ширину, если экран меньше 1200px */
+    box-sizing: border-box;
+}
     /* Scrollbar */
     ::-webkit-scrollbar { width: 4px; }
     ::-webkit-scrollbar-track { background: var(--void); }
