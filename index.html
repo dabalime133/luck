@@ -123,9 +123,12 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
+  html {
       scroll-behavior: smooth;
       font-size: 16px;
+      /* Добавьте сюда: */
+      overflow-x: hidden;
+      width: 100%;
     }
 
     body {
@@ -133,8 +136,11 @@
       color: var(--white);
       font-family: var(--font-body);
       line-height: 1.6;
-      overflow-x: hidden;
       cursor: default;
+      /* Обновите эти строки: */
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
     }
 
     /* Scrollbar */
@@ -259,6 +265,13 @@
     .btn-nav:hover::before { transform: translateX(0); }
     .btn-nav span { position: relative; z-index: 1; }
 
+.container {
+    max-width: 1200px; /* Та же ширина, что у вашего основного контента */
+    margin: 0 auto;    /* Центрирует блок */
+    padding: 0 20px;   /* Отступы, чтобы на мобильных текст не лип к краям */
+    width: 100%;
+    box-sizing: border-box;
+}
     /* ============================================================
        HERO SECTION
     ============================================================ */
@@ -667,7 +680,7 @@
 
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 24px;
     }
 
@@ -751,7 +764,7 @@
 
     .tactics-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
@@ -905,6 +918,8 @@
       display: flex; gap: 60px;
       animation: ticker-scroll 30s linear infinite;
       white-space: nowrap;
+      width: 100%;
+    overflow: hidden;
     }
     @keyframes ticker-scroll {
       from { transform: translateX(0); }
@@ -941,10 +956,16 @@
       grid-template-columns: 2fr 1fr 1fr 1fr;
       gap: clamp(30px, 5vw, 60px);
     }
-    @media (max-width: 768px) {
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-      .footer-brand { grid-column: 1 / -1; }
-    }
+@media (max-width: 768px) {
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 1024px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
     .footer-brand p {
       font-size: 14px;
@@ -1446,6 +1467,11 @@
     <h2 class="section-title reveal" id="tactics-title">КРУТЫЕ СТРАТЕГИИ КОТОРЫЕ<br><span class="gold">СЕЙЧАС РАБОТАЮТ</span></h2>
     <p class="section-desc reveal">Проверенные в боях подходы, используемые опытными игроками. Выберите свой стиль игры и применяйте его дисциплинированно.</p>
 
+    <div class="container">
+        <nav class="nav-inner">
+            </nav>
+    </div>
+
     <div class="tactics-grid">
 
       <article class="tactic-card featured reveal" aria-labelledby="t1-title">
@@ -1649,6 +1675,12 @@
     Lucky Jet is a game of chance. Past results do not predict future outcomes. Always gamble responsibly.
     This site contains affiliate links. We may receive compensation when you register via our links. 18+ only.
   </p>
+ 
+    <div class="container">
+        <div class="footer-inner">
+            </div>
+    </div>
+
 </footer>
 
 <!-- Sticky Mobile CTA -->
