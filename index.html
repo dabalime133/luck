@@ -194,6 +194,12 @@
       font-size: 20px;
       box-shadow: 0 0 20px var(--cyan-glow);
     }
+    .logo-img {
+      height: 40px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
     .logo-l { color: var(--cyan); }
     .logo-j { color: var(--gold); }
 
@@ -1024,6 +1030,200 @@
     }
 
     /* ============================================================
+       MOBILE OPTIMIZATIONS — PHONES
+    ============================================================ */
+    @media (max-width: 480px) {
+      html { font-size: 14px; }
+
+      header {
+        padding: 0 12px;
+        height: 56px;
+      }
+
+      .logo-img {
+        height: 32px;
+      }
+
+      .nav-logo {
+        font-size: 15px;
+      }
+
+      .btn-nav {
+        font-size: 10px;
+        padding: 8px 14px;
+        letter-spacing: 1px;
+      }
+
+      .hero-inner {
+        padding: 24px 12px 32px;
+        gap: 24px;
+      }
+
+      #hero {
+        padding-top: 56px;
+      }
+
+      .hero-title {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .hero-sub {
+        font-size: 14px;
+        margin-bottom: 24px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        font-size: 11px;
+        padding: 14px 20px;
+      }
+
+      .hero-stats {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .stat-val {
+        font-size: 20px;
+      }
+
+      .game-panel {
+        padding: 14px;
+      }
+
+      #flight-canvas {
+        height: clamp(160px, 50vw, 220px);
+      }
+
+      #multiplier-val {
+        font-size: clamp(36px, 12vw, 52px);
+      }
+
+      .bet-controls {
+        gap: 8px;
+      }
+
+      .quick-bet {
+        font-size: 11px;
+        padding: 7px 2px;
+      }
+
+      .btn-bet-demo, .btn-cashout {
+        font-size: 11px;
+        padding: 12px;
+      }
+
+      .section-inner {
+        padding: 40px 12px;
+      }
+
+      .section-title {
+        font-size: clamp(22px, 6vw, 32px);
+      }
+
+      .section-desc {
+        font-size: 14px;
+        margin-bottom: 32px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .step-card {
+        padding: 24px 18px;
+      }
+
+      .tactics-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .tactic-card {
+        padding: 20px 16px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer-brand { grid-column: 1; }
+
+      .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .history-bar {
+        gap: 5px;
+      }
+
+      .history-pill {
+        font-size: 10px;
+        padding: 2px 8px;
+      }
+
+      .faq-question {
+        padding: 14px 16px;
+      }
+
+      .faq-question h3 {
+        font-size: 13px;
+      }
+
+      .faq-answer p {
+        padding: 0 16px 16px;
+        font-size: 13px;
+      }
+
+      .sticky-cta a {
+        font-size: 12px;
+        padding: 14px;
+      }
+
+      body { padding-bottom: 72px; }
+    }
+
+    /* Средние телефоны 481–768 */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .hero-inner {
+        padding: 32px 16px 40px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tactics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ============================================================
        REVEAL ANIMATIONS
     ============================================================ */
     .reveal {
@@ -1071,8 +1271,7 @@
 ============================================================ -->
 <header>
   <a href="https://lkzq.cc/644450" class="nav-logo" aria-label="Lucky Jet Home">
-    <div class="logo-icon" aria-hidden="true">✈</div>
-    <span><span class="logo-l">LUCKY</span> <span class="logo-j">JET</span></span>
+    <img src="logo.png" alt="Lucky Jet Logo" class="logo-img" />
   </a>
 
   <nav aria-label="Main navigation">
@@ -1393,7 +1592,7 @@
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a5" role="region">
-          <p>Yes! Lucky Jet offers a fully functional demo mode with virtual credits. Use it to test strategies, understand the game rhythm, and find your ideal cashout timing — all without spending real money. Demo mode reflects the same mechanics and RNG as the live game.</p>
+          <p>Да! Lucky Jet предлагает полностью функциональный демо-режим с виртуальными кредитами. Используйте его для тестирования стратегий, понимания ритма игры и поиска идеального момента для вывода средств — всё это без расходования реальных денег. Демо-режим отражает те же механики и генератор случайных чисел, что и живая игра.</p>
         </div>
       </div>
 
@@ -1741,43 +1940,28 @@ function drawJoe(ctx, x, y, angleDeg, engines) {
   ctx.translate(x, y);
   ctx.rotate((angleDeg * Math.PI) / 180);
 
-  // Body
-  ctx.fillStyle = '#1a0d3d';
-  ctx.strokeStyle = '#00f5ff';
-  ctx.lineWidth = 1.5;
-  ctx.beginPath();
-  ctx.ellipse(0, 0, 22, 12, 0, 0, Math.PI * 2);
-  ctx.fill();
-  ctx.stroke();
-
-  // Wing
-  ctx.fillStyle = 'rgba(0,245,255,0.3)';
-  ctx.beginPath();
-  ctx.moveTo(-5, 0); ctx.lineTo(15, -18); ctx.lineTo(20, -2); ctx.closePath();
-  ctx.fill();
-
-  // Cockpit
-  ctx.fillStyle = 'rgba(0,245,255,0.6)';
-  ctx.beginPath();
-  ctx.ellipse(8, -4, 8, 6, -0.3, 0, Math.PI * 2);
-  ctx.fill();
-
-  // Jet icon (Joe's head)
-  ctx.fillStyle = '#ffc844';
-  ctx.beginPath();
-  ctx.arc(14, -3, 4, 0, Math.PI * 2);
-  ctx.fill();
+  // Draw rocket image
+  if (window._rocketImg && window._rocketImg.complete) {
+    const rw = 64, rh = 64;
+    ctx.drawImage(window._rocketImg, -rw / 2, -rh / 2, rw, rh);
+  } else {
+    // Fallback while image loads
+    ctx.fillStyle = '#00f5ff';
+    ctx.beginPath();
+    ctx.ellipse(0, 0, 22, 12, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
 
   // Engine flame
   if (engines) {
     const flicker = 0.8 + 0.4 * Math.random();
-    const flamGrad = ctx.createRadialGradient(-20, 0, 0, -20, 0, 14 * flicker);
+    const flamGrad = ctx.createRadialGradient(-32, 0, 0, -32, 0, 14 * flicker);
     flamGrad.addColorStop(0, 'rgba(255,200,68,0.9)');
     flamGrad.addColorStop(0.5, 'rgba(255,100,0,0.6)');
     flamGrad.addColorStop(1, 'transparent');
     ctx.fillStyle = flamGrad;
     ctx.beginPath();
-    ctx.ellipse(-20, 0, 14 * flicker, 5, 0, 0, Math.PI * 2);
+    ctx.ellipse(-32, 0, 14 * flicker, 5, 0, 0, Math.PI * 2);
     ctx.fill();
   }
   ctx.restore();
@@ -1870,6 +2054,10 @@ function setBet(amount) {
 /* ============================================================
    START ENGINE
 ============================================================ */
+// Preload rocket image
+window._rocketImg = new Image();
+window._rocketImg.src = 'rocket.png';
+
 startRound();
 requestAnimationFrame(ts => { lastTime = ts; requestAnimationFrame(gameLoop); });
 
