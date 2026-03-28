@@ -70,7 +70,7 @@
             "name": "Can I play Lucky Jet for free in demo mode?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, Lucky Jet offers a demo mode where you can practice with virtual credits, test strategies, and get familiar with the mechanics before wagering real money."
+              "text": "Absolutely. The Lucky Jet demo mode allows you to experience the full game mechanics with virtual credits. It's a great way to practice strategies and get a feel for the game before betting real money."
             }
           }
         ]
@@ -1043,6 +1043,21 @@
       margin: 0 clamp(16px, 8vw, 120px);
       opacity: 0.5;
     }
+    .promo-highlight {
+    color: #ffbc00;
+    font-weight: 900;
+    animation: promo-glow 2s ease-in-out infinite;
+}
+
+@keyframes promo-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 188, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 188, 0, 1), 0 0 30px rgba(255, 188, 0, 0.6);
+        transform: scale(1.05); /* Легкое увеличение */
+    }
+}
   </style>
 </head>
 <body>
@@ -1087,21 +1102,21 @@
       </div>
 
       <h1 class="hero-title">
-        <span class="line1">Fortune Favors</span>
-        <span class="line2">The Brave.</span>
+        <span class="line1">ВЫЙГРЫВАЮТ ТОЛЬКО</span>
+        <span class="line2">САМЫЕ СМЕЛЫЕ </span>
       </h1>
 
       <p class="hero-sub">
-        Master the most electrifying crash game online. Precision signals, pro strategies, and the highest multipliers — all in one cockpit.
+       «Lucky Jet  — Официальный сайт краш-игры. Получай точные сигналы, используй проверенные стратегии и лови самые высокие коэффициенты в кабине пилота Сэма.»
       </p>
 
       <div class="hero-cta-group">
         <a href="https://lkzq.cc/644450" class="btn-primary" aria-label="Play Lucky Jet now">
           <span class="btn-shimmer" aria-hidden="true"></span>
-          <span>🚀 Launch Game</span>
+          <span>🚀 ПЕРЕЙТИ В КАЗИНО</span>
         </a>
         <a href="#blueprint" class="btn-secondary" aria-label="Learn how to play Lucky Jet">
-          <span>Read The Blueprint</span>
+          <span>📖 КАК ИГРАТЬ</span>
         </a>
       </div>
 
@@ -1121,9 +1136,12 @@
       </div>
     </div>
 
-    <!-- RIGHT: Game Panel -->
-    <div class="game-panel" role="region" aria-label="Lucky Jet flight simulator">
-      <div class="game-header">
+   <div class="game-panel" role="region" aria-label="Lucky Jet flight simulator" style="position: relative;">
+  <div class="pilot-avatar" style="position: absolute; top: 15px; right: 80px; width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--cyan); overflow: hidden; box-shadow: 0 0 15px var(--cyan-glow); z-index: 10;">
+    <img src="raket.png" alt="Pilot" style="width: 100%; height: 100%; object-fit: cover;">
+  </div>
+  
+  <div class="game-header">
         <span class="game-title-sm">LUCKY JET DEMO </span>
         <div class="live-badge"><span class="dot" aria-hidden="true"></span> LIVE</div>
       </div>
@@ -1159,7 +1177,7 @@
            ПОСТАВИТЬ ДЕМО-СТАВКУ
         </button>
         <button class="btn-cashout" id="btn-cashout" onclick="cashOut()" disabled aria-label="Cash out now">
-          ВЫВЕСТИ В
+          ЗАБРАТЬ ВЫИГРЫШ
         </button>
       </div>
     </div>
@@ -1180,30 +1198,40 @@
 <section id="blueprint" aria-labelledby="blueprint-title">
   <div class="section-inner">
     <p class="section-eyebrow reveal">The Blueprint</p>
-    <h2 class="section-title reveal" id="blueprint-title">Master The Flight<br>In <span class="accent">Three Steps</span></h2>
-    <p class="section-desc reveal">From novice to high-flyer. The essential framework every profitable Lucky Jet player knows before they stake a single dollar.</p>
+    <h2 class="section-title reveal" id="blueprint-title">Lucky Jet  Официальный сайт и <br> <span class="accent">рабочие стратегии</span></h2>
+    <p class="section-desc reveal">Добро пожаловать на официальный портал игры Lucky Jet. Здесь вы найдете актуальное рабочее зеркало 1win, точные сигналы на сегодня и лучшие стратегии победы. Присоединяйтесь к полету Сэма, используйте прогнозы от нейросети и забирайте свои иксы прямо сейчас!</p>
 
     <div class="steps-grid">
 
       <article class="step-card reveal" aria-labelledby="step1-title">
         <div class="step-num" aria-hidden="true">01</div>
         <div class="step-icon cyan-bg" aria-hidden="true">🎯</div>
-        <h3 id="step1-title">Set Your Wager</h3>
-        <p>Choose your bet amount carefully — start low, build confidence. Set an auto-cashout target that matches your risk appetite. Consistency beats greed.</p>
+        <h3 id="step1-title">Как играть и выигрывать</h3>
+        <p>Суть игры: Lucky Jet (Лаки Джет) — это топовая краш-игра на платформе 1win, где ваш выигрыш зависит от коэффициента взлета.
+
+Алгоритм честности: Игра базируется на технологии Provably Fair, что исключает любые манипуляции с результатами раундов.
+
+Регистрация и вход: Чтобы начать играть на деньги, пройдите быструю регистрацию на официальном сайте  введите промокод Lucky Jet для получения бонуса на первый депозит и пополните баланс любым удобным способом.</p>
       </article>
 
       <article class="step-card reveal" aria-labelledby="step2-title">
         <div class="step-num" aria-hidden="true">02</div>
         <div class="step-icon gold-bg" aria-hidden="true">✈️</div>
-        <h3 id="step2-title">Watch Joe Ascend</h3>
-        <p>As Lucky Joe takes flight, your multiplier climbs in real time. The longer he flies, the bigger your reward — but he can crash at any moment. Timing is everything.</p>
+        <h3 id="step2-title">База знаний: Стратегии и Сигналы</h3>
+        <p>Рабочие стратегии Lucky Jet 2026:
+
+Минимальные риски: Автовывод на коэффициенте 1.1x–1.2x. Это самая популярная тактика на Лаки Джет для стабильного роста банка.
+
+Метод Мартингейла: Удвоение ставки после каждого проигрыша до победного раунда.
+
+Охота за x100: Анализ истории раундов для поиска «золотого часа», когда выпадают максимальные множители.</p>
       </article>
 
       <article class="step-card reveal" aria-labelledby="step3-title">
         <div class="step-num" aria-hidden="true">03</div>
         <div class="step-icon magenta-bg" aria-hidden="true">💰</div>
-        <h3 id="step3-title">Cash Out & Win</h3>
-        <p>Hit CASH OUT before Joe disappears. Your winnings are instantly credited: bet × multiplier. Withdraw fast — or let it ride for legendary multipliers.</p>
+        <h3 id="step3-title">Какой сейчас рабочий промокод?</h3>
+        <p>Для получения максимального приветственного бонуса используйте официальный промокод <span class="promo-highlight">PIXELWIN</span> Введите его при регистрации на официальном сайте , чтобы активировать бонус +500% к первому депозиту. Это даст вам мощный стартовый капитал для игры в Лаки Джет, позволяя тестировать стратегии и ловить высокие коэффициенты с минимальными личными вложениями.</p>
       </article>
 
     </div>
@@ -1218,30 +1246,30 @@
 <section id="tactics" aria-labelledby="tactics-title">
   <div class="section-inner">
     <p class="section-eyebrow reveal">Tactical Briefing</p>
-    <h2 class="section-title reveal" id="tactics-title">Pro Strategies That<br><span class="gold">Actually Work</span></h2>
-    <p class="section-desc reveal">Battle-tested approaches used by experienced players. Choose your playstyle and deploy with discipline.</p>
+    <h2 class="section-title reveal" id="tactics-title">КРУТЫЕ СТРАТЕГИИ КОТОРЫЕ<br><span class="gold">СЕЙЧАС РАБОТАЮТ</span></h2>
+    <p class="section-desc reveal">Проверенные в боях подходы, используемые опытными игроками. Выберите свой стиль игры и применяйте его дисциплинированно.</p>
 
     <div class="tactics-grid">
 
       <article class="tactic-card featured reveal" aria-labelledby="t1-title">
         <div class="tactic-header">
-          <h3 id="t1-title">The 1.5× Sniper</h3>
+          <h3 id="t1-title">Полет на Луну с Lucky Jet</h3>
           <span class="tactic-badge badge-safe">SAFE</span>
         </div>
-        <p>Auto-cashout at exactly 1.50×. Statistically, the game lands above 1.5× roughly 60% of rounds. Small, consistent gains compound into significant profit over sessions.</p>
+        <p>Автоматический вывод средств при коэффициенте ровно 1,50. Статистически, примерно в 60% раундов игра приносит прибыль выше 1,5. Небольшие, но стабильные выигрыши накапливаются и превращаются в значительную прибыль за игровые сессии.</p>
         <div class="tactic-params">
-          <div class="param">Target: <span>×1.50</span></div>
-          <div class="param">Win rate: <span>~60%</span></div>
-          <div class="param">Risk: <span>Low</span></div>
+          <div class="param">Цель: <span>×1.50</span></div>
+          <div class="param">Успех: <span>~60%</span></div>
+          <div class="param">Риск: <span>Низкий</span></div>
         </div>
       </article>
 
       <article class="tactic-card reveal" aria-labelledby="t2-title">
         <div class="tactic-header">
-          <h3 id="t2-title">Martingale Protocol</h3>
+          <h3 id="t2-title">Метод Мартингейла</h3>
           <span class="tactic-badge badge-medium">MEDIUM</span>
         </div>
-        <p>After each loss, double your bet. When you win, you recover all losses plus profit equal to your original stake. Requires solid bankroll discipline and a strict session cap.</p>
+        <p>Метод Мартингейла: Удвоение ставки после каждого проигрыша до победного раунда.</p>
         <div class="tactic-params">
           <div class="param">НАЧАЛНАЯ СТАВКА: <span>$1</span></div>
           <div class="param">МНОЖИТЕЛЬ: <span>×2.0</span></div>
@@ -1251,30 +1279,55 @@
 
       <article class="tactic-card reveal" aria-labelledby="t3-title">
         <div class="tactic-header">
-          <h3 id="t3-title">Split Ladder</h3>
+          <h3 id="t3-title">Разделенная Лестница</h3>
           <span class="tactic-badge badge-medium">MEDIUM</span>
         </div>
-        <p>Place two simultaneous bets: one auto-cashes at ×1.2 (covering the round cost), the second rides until ×5–10 for the upside. Asymmetric risk, consistent floor.</p>
+        <p>Разделенная Лестница: Разделение ставки на два компонента — один с низким, другой с высоким коэффициентом.</p>
         <div class="tactic-params">
-          <div class="param">Bet A: <span>×1.2</span></div>
-          <div class="param">Bet B: <span>×5–10</span></div>
-          <div class="param">Ratio: <span>70/30</span></div>
+          <div class="param">СТАВКА A: <span>×1.2</span></div>
+          <div class="param">СТАВКА B: <span>×5–10</span></div>
+          <div class="param">Соотношение: <span>70/30</span></div>
         </div>
       </article>
 
       <article class="tactic-card reveal" aria-labelledby="t4-title">
         <div class="tactic-header">
-          <h3 id="t4-title">Moon Hunter</h3>
+          <h3 id="t4-title">ОХОТНИК ЗА ЛУНОЙ</h3>
           <span class="tactic-badge badge-risky">HIGH RISK</span>
         </div>
-        <p>Minimum bet every round, manual cashout only when multiplier exceeds ×20. Rare mega-rounds exist. This strategy is pure variance play — bankroll must weather 20–50 rounds without a hit.</p>
+        <p>ОХОТНИК ЗА ЛУНОЙ: Стратегия, при которой игрок делает минимальную ставку в каждом раунде и выводит средства вручную только тогда, когда множитель превышает ×20. Редкие мега-раунды существуют. Эта стратегия — чистый игрик на вариацию — банкролл должен выдержать 20–50 раундов без попадания.</p>
         <div class="tactic-params">
-          <div class="param">Target: <span>×20+</span></div>
-          <div class="param">Patience: <span>High</span></div>
-          <div class="param">EV: <span>Variable</span></div>
+          <div class="param">Цель: <span>×20+</span></div>
+          <div class="param">Терпение: <span>Высокое</span></div>
+          <div class="param">EV: <span>Переменный</span></div>
         </div>
       </article>
 
+      <article class="tactic-card reveal" aria-labelledby="t4-title">
+        <div class="tactic-header">
+          <h3 id="t4-title">Двойной Форсаж</h3>
+          <span class="tactic-badge badge-risky">HIGH RISK</span>
+        </div>
+        <p>Использование продвинутого интерфейса 1win для страховки капитала. Вы делаете две ставки одновременно. Первую закрываете на низком коэффициенте (x1.5), чтобы полностью перекрыть сумму обеих ставок (выход в ноль). Вторую ставку оставляете для «охоты» за высокими множителями — x10, x50 или даже x100, двигаясь к сверхприбыли без риска для основного баланса.</p>
+        <div class="tactic-params">
+          <div class="param">Цель: <span>×50+</span></div>
+          <div class="param">Терпение: <span>Высокое</span></div>
+          <div class="param">EV: <span>Переменный</span></div>
+        </div>
+      </article>
+      
+      <article class="tactic-card reveal" aria-labelledby="t4-title">
+        <div class="tactic-header">
+          <h3 id="t4-title">Перехват Сигнала</h3>
+          <span class="tactic-badge badge-risky">HIGH RISK</span>
+        </div>
+        <p>Перехват Сигнала: Стратегия, при которой игрок ожидает появления определенного сигнала (например, достижения конкретного множителя) для совершения ставки. Эта стратегия требует высокого уровня терпения и дисциплины.</p>
+        <div class="tactic-params">
+          <div class="param">Цель: <span>×2+</span></div>
+          <div class="param">Терпение: <span>Среднее</span></div>
+          <div class="param">EV: <span>Переменный</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -1287,63 +1340,63 @@
 <section id="vault" aria-labelledby="vault-title">
   <div class="section-inner">
     <p class="section-eyebrow reveal">The Vault</p>
-    <h2 class="section-title reveal" id="vault-title">Your Questions,<br><span class="accent">Answered.</span></h2>
-    <p class="section-desc reveal">Everything you need to know before your first flight — from fairness verification to withdrawal mechanics.</p>
+    <h2 class="section-title reveal" id="vault-title">ОТВЕТЫ НА ВАШИ<br><span class="accent">ВОПРОСЫ</span></h2>
+    <p class="section-desc reveal">Всё, что вам нужно знать перед первым полётом — от проверки честности авиакомпании до механизма вывода средств.</p>
 
     <div class="faq-list reveal" role="list">
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false"
              aria-controls="faq-a1" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
-          <h3>What is Lucky Jet and how does the multiplier work?</h3>
+          <h3>Как найти рабочее зеркало Lucky Jet на сегодня?</h3>
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a1" role="region">
-          <p>Lucky Jet is a provably fair crash multiplier game. You place a bet before each round, watch Lucky Joe ascend with a climbing multiplier, and cash out manually — or set an auto-cashout — before he flies away. Your payout is your bet multiplied by the cashout multiplier. If you don't cash out in time, you lose your wager.</p>
+          <p>Из-за особенностей регулирования основной домен может быть недоступен. Чтобы всегда иметь доступ к игре, рекомендуем использовать официальные зеркала, которые обновляются ежедневно. Ссылку на актуальное зеркало можно найти в нашем  сайте  просто нажав на кнопку :Играть:</p>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false"
              aria-controls="faq-a2" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
-          <h3>What is the best Lucky Jet strategy for consistent wins?</h3>
+          <h3>Существуют ли рабочие сигналы или боты для Lucky Jet</h3>
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a2" role="region">
-          <p>No strategy eliminates house edge, but the 1.5× Sniper auto-cashout offers the best balance of win rate (~60%) and risk. Combine it with strict session limits: stop after doubling your deposit or losing 30%. Discipline is the only true edge in Lucky Jet.</p>
+          <p>Нет стратегии, которая полностью устраняет преимущество казино, но автоматический вывод 1.5× Sniper обеспечивает лучший баланс между частотой выигрышей (~60%) и риском. Комбинируйте его с строгими лимитами сессии: останавливайтесь после удвоения депозита или потери 30%. Дисциплина — единственное настоящее преимущество в Lucky Jet.</p>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false"
              aria-controls="faq-a3" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
-          <h3>How do withdrawals work on 1win Lucky Jet?</h3>
+          <h3>Как активировать промокод при регистрации и что он дает?</h3>
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a3" role="region">
-          <p>On 1win, withdrawals are processed via Visa/Mastercard, e-wallets (Skrill, Neteller), and cryptocurrency. Minimum withdrawal is typically $2–$10 depending on method. Processing ranges from 15 minutes (crypto) to 72 hours (bank cards). Ensure your account is verified (KYC) to avoid delays.</p>
+          <p>Промокод вводится в специальное поле при создании аккаунта.Он дает бонус +600% к первому депозиту. Бонусные средства зачисляются на отдельный баланс и постепенно переходят на основной счет по мере того, как вы делаете ставки в игре. Это отличный способ увеличить свой стартовый капитал без дополнительных вложений.</p>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false"
              aria-controls="faq-a4" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
-          <h3>Is Lucky Jet provably fair? Can I verify results?</h3>
+          <h3>Какая минимальная сумма ставки в Lucky Jet и как происходит вывод средств в рублях?</h3>
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a4" role="region">
-          <p>Yes. Lucky Jet uses a provably fair algorithm: before each round begins, a server seed is hashed and provided to the player. After the round, you can verify the outcome using the revealed seed. No one — not the platform, not the developer — can manipulate results after the hash is committed.</p>
+          <p>Игра максимально доступна: минимальная ставка составляет всего 10 рублей. Что касается выплат, то минимальная сумма вывода начинается от 100-500 рублей (зависит от выбранной платежной системы). Мы стараемся сохранять лимиты низкими, чтобы каждый мог комфортно протестировать механику игры.</p>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
         <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false"
              aria-controls="faq-a5" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFaq(this)">
-          <h3>Can I play Lucky Jet demo mode for free?</h3>
+          <h3>Можно ли играть в Lucky Jet в демо-режиме бесплатно?</h3>
           <div class="faq-icon" aria-hidden="true">+</div>
         </div>
         <div class="faq-answer" id="faq-a5" role="region">
-          <p>Yes! Lucky Jet offers a fully functional demo mode with virtual credits. Use it to test strategies, understand the game rhythm, and find your ideal cashout timing — all without spending real money. Demo mode reflects the same mechanics and RNG as the live game.</p>
+          <p>Да! Lucky Jet предлагает полностью функциональный демо-режим с виртуальными кредитами. Используйте его для тестирования стратегий, понимания ритма игры и поиска идеального момента для вывода средств — всё это без расходования реальных денег. Демо-режим отражает те же механики и генератор случайных чисел, что и живая игра.</p>
         </div>
       </div>
 
@@ -1359,7 +1412,9 @@
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="nav-logo">
-        <div class="logo-icon" aria-hidden="true">✈</div>
+        <<div class="logo-image-container" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 0 10px var(--cyan));">
+  <img src="pilot.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
         <span><span class="logo-l">LUCKY</span> <span class="logo-j">JET</span></span>
       </div>
       <p>The most advanced Lucky Jet strategy portal. Real signals, proven tactics, and a live simulator — all in one terminal.</p>
