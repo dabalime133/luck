@@ -2178,9 +2178,11 @@ const revealObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.12 });
-function toggleMobileMenu() {
-    const panel = document.getElementById('mobileNav');
-    panel.classList.toggle('active');
+
+}
+  // Открытие и закрытие мобильного меню
+function toggleMenu() {
+  document.getElementById('mobile-sidebar').classList.toggle('open');
 }
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   
