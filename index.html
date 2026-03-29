@@ -287,74 +287,6 @@
     gap: 15px;
 }
 
-/* Стили бургера */
-.mobile-menu-btn {
-    display: none; /* Скрыт на ПК */
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-.mobile-menu-btn span {
-    width: 25px;
-    height: 2px;
-    background: var(--neon-blue);
-    box-shadow: 0 0 10px var(--neon-blue);
-    transition: 0.3s;
-}
-
-/* Мобильная панель */
-.mobile-nav-panel {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100%;
-    background: rgba(10, 10, 15, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 2000;
-    transition: 0.5s;
-    padding: 60px 20px;
-    border-right: 1px solid var(--neon-blue);
-}
-
-.mobile-nav-panel.active { left: 0; }
-
-.mobile-nav-panel a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 2rem;
-    color: var(--neon-blue);
-    cursor: pointer;
-}
-
-/* АДАПТИВ ПОД ТЕЛЕФОН */
-@media (max-width: 768px) {
-    .logo-text, .nav-links {
-        display: none !important; /* Убираем текст и старые ссылки */
-    }
-
-    .mobile-menu-btn {
-        display: flex; /* Показываем полоски */
-    }
-
-    .btn-nav {
-        padding: 8px 20px;
-        font-size: 0.8rem;
-    }
-}
 
 .container {
     max-width: 1200px; /* Та же ширина, что у вашего основного контента */
@@ -1371,6 +1303,35 @@
         transform: scale(1.05); /* Легкое увеличение */
     }
 }
+    <header id="site-header">
+  <div class="header-wrap">
+    
+    <div class="burger-icon" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <a href="/" class="brand-logo">
+      <img src="logo.png" alt="Lucky Jet">
+      <span class="brand-text">LUCKY<span class="hl">JET</span></span>
+    </a>
+
+    <nav class="desktop-menu">
+      <a href="#blueprint">КАК ИГРАТЬ</a>
+      <a href="#tactics">СТРАТЕГИИ</a>
+      <a href="#vault">FAQ</a>
+    </nav>
+
+    <a href="https://lkzq.cc/644450" class="action-btn">ИГРАТЬ</a>
+
+  </div>
+</header>
+
+<div id="mobile-sidebar" class="mobile-sidebar">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="#blueprint" onclick="toggleMenu()">Как играть</a>
+  <a href="#tactics" onclick="toggleMenu()">Стратегии</a>
+  <a href="#vault" onclick="toggleMenu()">FAQ</a>
+</div>
   </style>
 </head>
 <body>
@@ -1382,24 +1343,35 @@
 <!-- ============================================================
      HEADER
 ============================================================ -->
-<header>
-    <div class="container header-content">
-        <div class="header-left">
-           <div class="container header-content">
-        <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
-            <span></span><span></span><span></span>
-        </div>
-
-        <a href="/" class="nav-logo">
-            <img src="logo.png" alt="L" class="header-avatar">
-            <span class="logo-text desktop-only">LUCKY<span class="highlight">JET</span></span>
-        </a>
-
-        <div class="nav-actions">
-            <button class="btn-nav"><span>ИГРАТЬ</span></button>
-        </div>
+<header id="site-header">
+  <div class="header-wrap">
+    
+    <div class="burger-icon" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
     </div>
+
+    <a href="/" class="brand-logo">
+      <img src="logo.png" alt="Lucky Jet">
+      <span class="brand-text">LUCKY<span class="hl">JET</span></span>
+    </a>
+
+    <nav class="desktop-menu">
+      <a href="#blueprint">КАК ИГРАТЬ</a>
+      <a href="#tactics">СТРАТЕГИИ</a>
+      <a href="#vault">FAQ</a>
+    </nav>
+
+    <a href="https://lkzq.cc/644450" class="action-btn">ИГРАТЬ</a>
+
+  </div>
 </header>
+
+<div id="mobile-sidebar" class="mobile-sidebar">
+  <div class="close-btn" onclick="toggleMenu()">×</div>
+  <a href="#blueprint" onclick="toggleMenu()">Как играть</a>
+  <a href="#tactics" onclick="toggleMenu()">Стратегии</a>
+  <a href="#vault" onclick="toggleMenu()">FAQ</a>
+</div>
 
 <div class="mobile-nav-panel" id="mobileNav">
     <div class="close-menu" onclick="toggleMobileMenu()">&times;</div>
