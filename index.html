@@ -272,6 +272,89 @@
     .btn-nav:hover { color: var(--void); box-shadow: 0 0 30px var(--cyan-glow); }
     .btn-nav:hover::before { transform: translateX(0); }
     .btn-nav span { position: relative; z-index: 1; }
+    /* Базовая настройка флекса для хедера */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Стили бургера */
+.mobile-menu-btn {
+    display: none; /* Скрыт на ПК */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.mobile-menu-btn span {
+    width: 25px;
+    height: 2px;
+    background: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+    transition: 0.3s;
+}
+
+/* Мобильная панель */
+.mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    transition: 0.5s;
+    padding: 60px 20px;
+    border-right: 1px solid var(--neon-blue);
+}
+
+.mobile-nav-panel.active { left: 0; }
+
+.mobile-nav-panel a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--neon-blue);
+    cursor: pointer;
+}
+
+/* АДАПТИВ ПОД ТЕЛЕФОН */
+@media (max-width: 768px) {
+    .logo-text, .nav-links {
+        display: none !important; /* Убираем текст и старые ссылки */
+    }
+
+    .mobile-menu-btn {
+        display: flex; /* Показываем полоски */
+    }
+
+    .btn-nav {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+}
 
 .container {
     max-width: 1200px; /* Та же ширина, что у вашего основного контента */
@@ -1300,26 +1383,38 @@
      HEADER
 ============================================================ -->
 <header>
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <a href="/" class="nav-logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-            <img src="logo.png" alt="Lucky Jet Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-blue);">
-            
-            <span class="logo-text" style="font-weight: 800; letter-spacing: 1px;">
-                LUCKY<span style="color: var(--neon-blue);">JET</span>
-            </span>
-        </a>
-        
-        <nav class="nav-links" style="display: flex; gap: 25px;">
-            <a href="#signals" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Сигналы</a>
-            <a href="#strategy" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Стратегии</a>
-            <a href="#demo" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Демо</a>
+    <div class="container header-content">
+        <div class="header-left">
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <a href="/" class="nav-logo">
+                <img src="logo.png" alt="L">
+                <span class="logo-text">LUCKY<span class="highlight">JET</span></span>
+            </a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#signals">Сигналы</a>
+            <a href="#strategy">Стратегии</a>
+            <a href="#demo">Демо</a>
         </nav>
 
         <div class="nav-actions">
-            <button class="btn-nav"><span>Вход</span></button>
+            <button class="btn-nav"><span>ИГРАТЬ</span></button>
         </div>
     </div>
 </header>
+
+<div class="mobile-nav-panel" id="mobileNav">
+    <div class="close-menu" onclick="toggleMobileMenu()">&times;</div>
+    <nav>
+        <a href="#signals" onclick="toggleMobileMenu()">Сигналы</a>
+        <a href="#strategy" onclick="toggleMobileMenu()">Стратегии</a>
+        <a href="#demo" onclick="toggleMobileMenu()">Демо-игра</a>
+        <a href="#faq" onclick="toggleMobileMenu()">FAQ</a>
+    </nav>
+</div>
 <!-- ============================================================
      HERO
 ============================================================ -->
@@ -2116,7 +2211,10 @@ const revealObserver = new IntersectionObserver(entries => {
     }
   });
 }, { threshold: 0.12 });
-
+function toggleMobileMenu() {
+    const panel = document.getElementById('mobileNav');
+    panel.classList.toggle('active');
+}
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   
 </script>
