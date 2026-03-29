@@ -1301,16 +1301,18 @@
 ============================================================ -->
 <header>
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <div class="nav-logo">
-            <div class="logo-icon"></div>
-            <span class="logo-text">LUCKY<span class="highlight">JET</span></span>
-        </div>
+        <a href="/" class="nav-logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <img src="logo.png" alt="Lucky Jet Logo" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--neon-blue);">
+            
+            <span class="logo-text" style="font-weight: 800; letter-spacing: 1px;">
+                LUCKY<span style="color: var(--neon-blue);">JET</span>
+            </span>
+        </a>
         
-        <nav class="nav-links">
-            <a href="#signals">Сигналы</a>
-            <a href="#strategy">Стратегии</a>
-            <a href="#demo">Демо-игра</a>
-            <a href="#faq">FAQ</a>
+        <nav class="nav-links" style="display: flex; gap: 25px;">
+            <a href="#signals" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Сигналы</a>
+            <a href="#strategy" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Стратегии</a>
+            <a href="#demo" style="text-decoration: none; color: var(--white); font-size: 0.9rem; opacity: 0.8;">Демо</a>
         </nav>
 
         <div class="nav-actions">
@@ -1318,7 +1320,6 @@
         </div>
     </div>
 </header>
-
 <!-- ============================================================
      HERO
 ============================================================ -->
